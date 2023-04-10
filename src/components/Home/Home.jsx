@@ -1,7 +1,13 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
+import Categories from "../Categories/Categories";
 
 const Home = () => {
+  const categoryData = useLoaderData();
+  const {categories} = categoryData
+  console.log(categories.length);
   return (
+    <>
     <div className="flex justify-evenly mt-14">
       <div className="w-1/3">
         <h1 className="text-6xl font-bold tracking-wide py-5 leading-tight">
@@ -17,6 +23,21 @@ const Home = () => {
         />
       </div>
     </div>
+
+    <div className="categori-item  w-full mt-16">
+      <div className="text-center">
+      <h1 className="text-5xl font-semibold text-gray-900 my-5">Job Category List </h1>
+      <p className="text-gray-600  font-semibold">Job category means a broad-based group of employees with comparable job responsibilities</p>
+      </div>
+    <div className="flex justify-center my-8 gap-5">
+    {
+      categories.map(categorie => <Categories key={categorie.id} categorie={categorie}></Categories>)
+    }
+    </div>
+
+    </div>
+
+    </>
   );
 };
 

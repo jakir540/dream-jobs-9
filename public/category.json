@@ -1,24 +1,28 @@
 {
     "categories": [
       {
-        "category-logo": "https://images.unsplash.com/photo-1584441405886-bc91be61e56a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=730&q=80",
-        "category-name": "Engineering",
-        "jobs-available": 4
+        "id" : 1,
+        "category_logo": "https://images.unsplash.com/photo-1584441405886-bc91be61e56a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=730&q=80",
+        "category_name": "Engineering",
+        "jobs_available": 4
       },
       {
-        "category-logo": "https://images.unsplash.com/photo-1617566347924-ad5ebdaa014e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        "category-name": "Marketing",
-        "jobs-available": 3
+        "id" : 2,
+        "category_logo": "https://images.unsplash.com/photo-1617566347924-ad5ebdaa014e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "category_name": "Marketing",
+        "jobs_available": 3
       },
       {
-        "category-logo": "https://images.unsplash.com/photo-1615915468538-0fbd857888ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&q=80",
-        "category-name": "Finance",
-        "jobs-available": 2
+        "id" : 3,
+        "category_logo": "https://images.unsplash.com/photo-1615915468538-0fbd857888ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&q=80",
+        "category_name": "Finance",
+        "jobs_available": 2
       },
       {
-        "category-logo": "https://images.unsplash.com/photo-1619679505795-a4d0e6be5e02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-        "category-name": "Design",
-        "jobs-available": 5
+        "id" : 4,
+        "category_logo": "https://images.unsplash.com/photo-1619679505795-a4d0e6be5e02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        "category_name": "Design",
+        "jobs_available": 5
       }
     ]
   }
