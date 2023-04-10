@@ -11,6 +11,7 @@ import Home from "./components/Home/Home";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 import { categorydata } from "./loaders/loaders";
+import Footer from "./components/Footer/Footer";
 
 // const router = createBrowserRouter([
 //   {
@@ -18,7 +19,7 @@ import { categorydata } from "./loaders/loaders";
 //     element: <App />,
 //     errorElement: <ErrorPage></ErrorPage>,
 //     children: [
-     
+
 //       {
 //         path: "/",
 //         element: <Home></Home>,
@@ -29,7 +30,7 @@ import { categorydata } from "./loaders/loaders";
 //         element: <Feature></Feature>,
 //         loader:()=> fetch('Featured.json')
 //       },
-     
+
 //       {
 //         path: "statistics",
 //         element: <Statistics></Statistics>,
@@ -46,39 +47,31 @@ import { categorydata } from "./loaders/loaders";
 //   },
 // ]);
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
         element: <Home />,
-        loader:()=> fetch("category.json"),
-        },
-        {
-          path:'statistics',
-          element:<Statistics></Statistics>
-        },
-        {
-          path:'applied jobs',
-          element:<AppliedJobs></AppliedJobs>
-        },
-        {
-          path:'blogs',
-          element:<Blogs></Blogs>
-        },
+        loader:()=> fetch('Featured.json')
+      },
 
-            
+      {
+        path: "statistics",
+        element: <Statistics></Statistics>,
+      },
+      {
+        path: "applied jobs",
+        element: <AppliedJobs></AppliedJobs>,
+      },
+      {
+        path: "blogs",
+        element: <Blogs></Blogs>,
+      },
     ],
-
-
-
-
-
   },
 ]);
 

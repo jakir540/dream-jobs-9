@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Categories from "../Categories/Categories";
-
+import Footer from "../Footer/Footer";
+import Feature from "../Feature/Feature";
 
 const Home = () => {
+  const featuredData =useLoaderData();
+  // console.log(featuredData);
  
-  const categoryData = useLoaderData();
-  const { categories } = categoryData;
 
+  const [categories, setCategories] = useState([]);
 
-
+  useEffect(() => {
+    fetch("category.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data.categories));
+  }, []);
 
   return (
     <div>
@@ -51,7 +57,11 @@ const Home = () => {
         </div>
       </div>
 
-      
+    
+    <Feature featuredData={featuredData}></Feature>
+
+
+      <Footer></Footer>
     </div>
   );
 };
