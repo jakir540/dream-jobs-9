@@ -15,9 +15,10 @@ const ErrorPage = () => {
 
         <div className="max-w-md text-center">
           <h2 className="mb-8 font-extrabold text-9xl text-gray-600">
-            <span className="sr-only">Error</span> {status || "400"}
+            <span className="sr-only">Error</span> {error || " "}
           </h2>
           <p className="text-2xl font-semibold md:text-3xl mb-8">
+            
             {error.message}
           </p>
           <Link

@@ -10,6 +10,17 @@ const Home = () => {
  
 
   const [categories, setCategories] = useState([]);
+// useEffect(async()=>{
+//   const loadedProducts = await fetch('category.json');
+//     const products = await loadedProducts.json();
+//     setCategories(products)
+
+// },[])
+
+
+
+
+
 
   useEffect(() => {
     fetch("category.json")
@@ -61,7 +72,7 @@ const Home = () => {
     <Feature featuredData={featuredData}></Feature>
 
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 };
