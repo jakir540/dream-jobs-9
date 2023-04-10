@@ -1,5 +1,5 @@
 import React from "react";
-import Feature from "../Feature/Feature";
+
 
 const Categories = ({ categorie }) => {
   const { category_logo, category_name, jobs_available } = categorie;

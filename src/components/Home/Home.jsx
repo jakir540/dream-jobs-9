@@ -1,18 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Categories from "../Categories/Categories";
-import Feature from "../Feature/Feature";
+
 
 const Home = () => {
+ 
   const categoryData = useLoaderData();
   const { categories } = categoryData;
-
-useEffect(()=>{
-  const categories = fetch('category.json')
-  .then(res ())
-
-
-},[])
 
 
 
@@ -57,7 +51,7 @@ useEffect(()=>{
         </div>
       </div>
 
-      <Feature></Feature>
+      
     </div>
   );
 };

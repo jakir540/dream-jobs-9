@@ -9,38 +9,76 @@ import AppliedJobs from "./components/AppliedJobs/AppliedJobs";
 import Blogs from "./components/Blogs/Blogs";
 import Home from "./components/Home/Home";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
-import Feature from "./components/Feature/Feature";
+
+import { categorydata } from "./loaders/loaders";
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     errorElement: <ErrorPage></ErrorPage>,
+//     children: [
+     
+//       {
+//         path: "/",
+//         element: <Home></Home>,
+//         loader:categorydata,
+//       },
+//       {
+//         path: "/",
+//         element: <Feature></Feature>,
+//         loader:()=> fetch('Featured.json')
+//       },
+     
+//       {
+//         path: "statistics",
+//         element: <Statistics></Statistics>,
+//       },
+//       {
+//         path: "applied jobs",
+//         element: <AppliedJobs></AppliedJobs>,
+//       },
+//       {
+//         path: "blogs",
+//         element: <Blogs></Blogs>,
+//       },
+//     ],
+//   },
+// ]);
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    errorElement: <ErrorPage></ErrorPage>,
+    element: <App></App>,
+    // errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
-        element: <Feature></Feature>,
-        loader:()=> fetch('Featured.json')
-      },
-      {
-        path: "/",
-        element: <Home></Home>,
-        loader: () => fetch("category.json"),
-      },
-     
-      {
-        path: "statistics",
-        element: <Statistics></Statistics>,
-      },
-      {
-        path: "applied jobs",
-        element: <AppliedJobs></AppliedJobs>,
-      },
-      {
-        path: "blogs",
-        element: <Blogs></Blogs>,
-      },
+        element: <Home />,
+        loader:()=> fetch("category.json"),
+        },
+        {
+          path:'statistics',
+          element:<Statistics></Statistics>
+        },
+        {
+          path:'applied jobs',
+          element:<AppliedJobs></AppliedJobs>
+        },
+        {
+          path:'blogs',
+          element:<Blogs></Blogs>
+        },
+
+            
     ],
+
+
+
+
+
   },
 ]);
 
