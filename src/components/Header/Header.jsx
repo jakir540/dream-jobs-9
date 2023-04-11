@@ -11,7 +11,7 @@ export class Header extends Component {
         <div className="flex">
           
             <Link className="mx-10" to="/statistics">Statistics</Link>
-            <Link className="mx-10" to="/applied jobs">Applied Jobs</Link>
+            <Link className="mx-10" to="/appliedjobs">Applied Jobs</Link>
             <Link className="mx-10" to="blogs">Blogs</Link>
           </div>
        

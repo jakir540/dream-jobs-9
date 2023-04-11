@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import FeatureItem from "../FeatureItem/FeatureItem";
 
 const Feature = ({ featuredData }) => {
   const { jobs } = featuredData;
+  
 
   return (
     <div className="flex items-center justify-center my-10">

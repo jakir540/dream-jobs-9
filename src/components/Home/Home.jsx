@@ -6,7 +6,7 @@ import Feature from "../Feature/Feature";
 
 const Home = () => {
   const featuredData =useLoaderData();
-  // console.log(featuredData);
+ 
  
 
   const [categories, setCategories] = useState([]);

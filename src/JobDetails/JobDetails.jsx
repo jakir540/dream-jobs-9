@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import {
   CurrencyDollarIcon,
   PresentationChartBarIcon,
@@ -7,6 +7,7 @@ import {
   EnvelopeIcon,
   MapIcon,
 } from "@heroicons/react/24/solid";
+import { addToDb } from "../components/utilities/utilities";
 
 const JobDetails = () => {
   const jobDetails = useLoaderData();
@@ -18,7 +19,7 @@ const JobDetails = () => {
     location,
     onsite_job,
     salary,
-    remote_job,
+    id,
     fulltime,
     experience,
     job_description,
@@ -97,8 +98,8 @@ const JobDetails = () => {
                 </p>
               </div>
 
-              <div className="card-actions justify-end py-5">
-                <button className="bg-blue-400 btn w-full border-none">Apply Now</button>
+              <div  className="card-actions justify-end py-5">
+               <Link to='/appliedjobs'> <button onClick={()=> addToDb(id)} className="bg-blue-400 btn w-full border-none">Apply Now</button></Link>
               </div>
             </div>
           </div>
