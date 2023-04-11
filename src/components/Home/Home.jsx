@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Categories from "../Categories/Categories";
-import Footer from "../Footer/Footer";
+import './Home.css'
 import Feature from "../Feature/Feature";
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
     <div>
       <div className="flex-cols md:flex  md:justify-evenly mt-14">
         <div className=" md:w-1/3 w-full">
-          <h1 className="md:text-6xl text-3xl font-bold tracking-wide py-5 leading-tight">
+          <h1 className="md:text-6xl text-3xl font-bold tracking-wide py-8 leading-tight">
             The Next Step <br /> Closer To Find Your <br />{" "}
             <span className="text-blue-400">Dream Jobs</span>
           </h1>
@@ -32,14 +32,14 @@ const Home = () => {
             blogger, doctor, professor, flight attendant, firefighter, judge,
             lawyer, attorney and psychologis
           </p>
-          <div className="mt-10">
+          <div className="mt-10 image">
           <button className="bg-blue-400 rounded-md p-3 mt-6  text-white font-semibold md:m-0 m-5">
             Get Started
           </button>
           </div>
         </div>
-        <div className="sm:m-5">
-          <img className="rounded-lg" src="src/assets/photohome.jpg" alt="" />
+        <div className="sm:m-5 ">
+          <img className="rounded-lg image" src="https://media.istockphoto.com/id/1424988699/photo/businessman-contemplating-in-the-office-looking-through-the-window.jpg?b=1&s=170667a&w=0&k=20&c=jlF3Ihf5kO3-6dWUGhj8WTuB1Z2tiACre770YowcMTA=" alt="" />
         </div>
       </div>
 
