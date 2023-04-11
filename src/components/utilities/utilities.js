@@ -9,6 +9,7 @@ const addToDb =(id)=>{
         jobsCart[id] = newQuantity;
     }
     localStorage.setItem('jobs-cart', JSON.stringify(jobsCart))
+    
 
 }
 
@@ -37,9 +38,20 @@ const deletejobsCart =()=>{
     localStorage.removeItem('jobs-cart')
 }
 
+
+
+
+
+
+
+
+
+
+
 export {
     addToDb,
     deletejobsCart,
     getjobsCart,
     removeFromDb,
+   
 }

@@ -1,73 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import { getjobsCart } from '../utilities/utilities';
+import React, { useEffect, useState } from "react";
+import { getjobsCart } from "../utilities/utilities";
+import ShowApliedJobs from "./ShowApliedJobs/ShowApliedJobs";
 
 const AppliedJobs = () => {
+  const [allJobs, setAllJobs] = useState([]);
+  const [findJob, setFindJob] = useState([]);
+  console.log(findJob);
 
-    const [jobs , setJobs ]=useState([])
-    // console.log(jobs.jobs);
+  useEffect(() => {
+    fetch("Featured.json")
+      .then((res) => res.json())
+      .then((data) => setAllJobs(data.jobs));
+  }, []);
 
+  useEffect(() => {
+    const storedJobs = getjobsCart();
+    const savedJobs = [];
 
-    const getJobsCartFromDb = getjobsCart();
-    // console.log(getJobsCartFromDb);
-
-    useEffect(() => {
-        fetch("Featured.json")
-          .then((res) => res.json())
-          .then((data) => setJobs(data));
-      }, []);
-
-
-
-
-
-
-    const handleAddToCart = (product) => {
-        // let newcart = [...cart, product];
-        // setCart(newcart);
-        // console.log(cart);
-    
-        let newCart = [];
-        const exists = cart.find((pd) => pd.id === product.id);
-        if (!exists) {
-          product.quantity = 1;
-          newCart = [...cart, product];
-        } else {
-          exists.quantity = exists.quantity + 1;
-          const remaining = cart.filter((pd) => pd.id !== product.id);
-          newCart = [...remaining, exists];
-        }
-        setCart(newCart);
-        addToDb(product.id);
-      };
-    
-      const handleClearCart =()=>{
-        setCart([]);
-        deleteShoppingCart();
+    for (const id in storedJobs) {
+      const addedProduct = allJobs.find(
+        (job) => job.id === Number.parseInt(id)
+      );
+      if (addedProduct) {
+        savedJobs.push(addedProduct);
       }
+    }
+    setFindJob(savedJobs);
+  }, [allJobs]);
+
+  return <div>
+
+    <h1 className="text-center text-3xl font-semibold my-8">
+      Applied Jobs
+    </h1>
+        
+    {
+      findJob.map(job => <ShowApliedJobs key={job.id} job={job}></ShowApliedJobs>)
+    }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return (
-        <div>
-            this is the AppliedJobs components
-            {/* <p>{jobs.jobs.length}</p> */}
-        </div>
-    );
+  </div>;
 };
 
 export default AppliedJobs;

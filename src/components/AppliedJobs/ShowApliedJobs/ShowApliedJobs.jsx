@@ -1,39 +1,31 @@
 import React from "react";
-import {} from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
-import { addToDb } from "../utilities/utilities";
 
-const FeatureItem = ({ feature }) => {
-  const {
-    company_logo,
-    company_name,
-    job_title,
-    location,
-    onsite_job,
-    salary,
-    remote_job,
-    fulltime,
-    id,
-  } = feature;
- 
+const ShowApliedJobs = ({job}) => {
+
+    const { company_logo,
+        company_name,
+        job_title,
+        location,
+        onsite_job,
+        salary,
+        remote_job,
+        fulltime,
+        id,} = job
   return (
-    <div>
-      <div className="card w-full bg-base-100 shadow-xl">
+    <div className="flex justify-center items-center">
+      <div className="card card-side bg-base-300 shadow-xl h-80 w-1/2 my-8 px-8">
         <figure>
-          <img
-            className="w-16 h-16 rounded-md"
+          <img className="w-60 h-60 rounded-md"
             src={company_logo}
-            alt="Company logo"
+            alt="logo"
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">
-            {job_title}
-            <div className="badge badge-secondary">NEW JOB</div>
-          </h2>
+          <h2 className="card-title">{job_title}</h2>
+          <h4>{company_name}</h4>
 
-          <div className="card-actions justify-start my-4">
-            <div className="rounded-md btn-outline border text-blue-700 font-semibold px-5 py-2">
+          <div className="flex justify-start my-4">
+            <div className="rounded-md btn-outline border text-blue-700 font-semibold px-5 mx-5 py-2">
               {onsite_job ? "Onsite" : "Remort"}
             </div>
             <div className="rounded-md btn-outline border text-blue-700 font-semibold px-5 py-2">
@@ -43,8 +35,9 @@ const FeatureItem = ({ feature }) => {
 
 
 
-          <div className="flex mx-5 my-4">
+          <div className="flex my-4 ">
             <p className="flex">
+                
               <span className="mx-2"><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -66,25 +59,21 @@ const FeatureItem = ({ feature }) => {
               </svg></span>
               {location}
             </p>
-            <p>Salary : {salary}</p>
+            <p className="">
+                Salary : {salary}</p>
+        
+
+
+
+
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Watch</button>
           </div>
-
-
-
-          
-
-          <Link to={`/jobDetails/${id}`}>
-          <button className="rounded-md w-32 bg-blue-400 font-semibold px-5 py-2">
-            View Details
-          </button>
-          
-          </Link>
+          </div>
         </div>
       </div>
-
-     
     </div>
   );
 };
 
-export default FeatureItem;
+export default ShowApliedJobs;

@@ -10,16 +10,6 @@ const Home = () => {
  
 
   const [categories, setCategories] = useState([]);
-// useEffect(async()=>{
-//   const loadedProducts = await fetch('category.json');
-//     const products = await loadedProducts.json();
-//     setCategories(products)
-
-// },[])
-
-
-
-
 
 
   useEffect(() => {
