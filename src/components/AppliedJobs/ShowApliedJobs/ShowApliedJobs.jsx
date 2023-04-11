@@ -20,8 +20,8 @@ const ShowApliedJobs = ({ job }) => {
           <img className="w-60 h-60 rounded-md" src={company_logo} alt="logo" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{job_title}</h2>
-          <h4>{company_name}</h4>
+          <h2 className="card-title font-bold">{job_title}</h2>
+          <h4 className="font-semibold">{company_name}</h4>
 
           <div className="flex justify-start my-4">
             <div className="rounded-md btn-outline border text-blue-700 font-semibold px-5 mx-5 py-2">
@@ -32,7 +32,7 @@ const ShowApliedJobs = ({ job }) => {
             </div>
           </div>
 
-          <div className="flex my-4 ">
+          <div className="flex my-4 font-semibold">
             <p className="flex">
               <span className="mx-2">
                 <svg
