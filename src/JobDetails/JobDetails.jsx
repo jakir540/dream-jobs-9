@@ -9,12 +9,8 @@ import {
 } from "@heroicons/react/24/solid";
 import { addToDb } from "../components/utilities/utilities";
 
-
 const JobDetails = () => {
   const jobDetails = useLoaderData();
-  console.log(jobDetails);
-
- 
 
   const {
     phone,
@@ -116,7 +112,7 @@ const JobDetails = () => {
             </div>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
   );
 };

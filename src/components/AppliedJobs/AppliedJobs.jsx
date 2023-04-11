@@ -27,16 +27,15 @@ const AppliedJobs = () => {
 
   const handleFilter = (e) => {
     let remoteJb = [];
-    if (e.target.value === "remote") {    
+    if (e.target.value === "remote") {
       const romoteJobs = findJob.filter((job) => job.remote_job === true);
-      remoteJb= [...romoteJobs];
+      remoteJb = [...romoteJobs];
       setFindJob(remoteJb);
     } else if (e.target.value === "onsite") {
       const romoteJobs = findJob.filter((job) => job.remote_job === false);
-      remoteJb= [...romoteJobs];
+      remoteJb = [...romoteJobs];
       setFindJob(remoteJb);
     }
-    console.log(remoteJb);
   };
 
   return (
