@@ -7,7 +7,7 @@ const Categories = ({ categorie }) => {
   return (
     <>
 
-      <div className="card w-96 bg-base-200 shadow-xl text-start">
+      <div className="card w-96 bg-base-200 shadow-xl text-start mb-6">
         <figure>
           <img className="w-16 h-16 rounded-md mt-4"
             src={category_logo}

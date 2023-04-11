@@ -22,7 +22,7 @@ const FeatureItem = ({ feature }) => {
           <img
             className="w-16 h-16 rounded-md"
             src={company_logo}
-            alt="Shoes"
+            alt="Company logo"
           />
         </figure>
         <div className="card-body">

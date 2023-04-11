@@ -22,7 +22,7 @@ const Feature = ({ featuredData }) => {
             website{" "}
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-8 text-center w-full mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 text-center w-full mx-auto">
           {jobs?.slice(0,showAll ? 6: 4).map((feature) => (
             <FeatureItem key={feature.id} feature={feature}></FeatureItem>
           ))}
@@ -31,7 +31,7 @@ const Feature = ({ featuredData }) => {
     </div>
     
     {
-      jobs.length === 6 && <div className="flex justify-center  "  >
+      !showAll && <div className="flex justify-center  "  >
       <button onClick={handleClickBtn} className="rounded-md w-32 bg-blue-400 font-semibold px-5 py-2 " >Show More</button>
       </div>
     }

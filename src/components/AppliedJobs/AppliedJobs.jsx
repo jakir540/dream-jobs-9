@@ -8,7 +8,7 @@ const AppliedJobs = () => {
 
 
     const getJobsCartFromDb = getjobsCart();
-    console.log(getJobsCartFromDb);
+    // console.log(getJobsCartFromDb);
 
     useEffect(() => {
         fetch("Featured.json")
