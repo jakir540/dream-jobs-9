@@ -13,7 +13,7 @@ const Feature = ({ featuredData }) => {
 
   return (
    <section>
-    <div className="flex items-center justify-center my-10">
+    <div className="flex items-center justify-center my-16">
       <div>
         <div className="text-center mb-16 ">
           <h1 className="text-5xl font-semibold mb-5">Featured Jobs</h1>

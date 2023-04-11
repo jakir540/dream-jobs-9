@@ -32,9 +32,11 @@ const Home = () => {
             blogger, doctor, professor, flight attendant, firefighter, judge,
             lawyer, attorney and psychologis
           </p>
-          <button className="bg-blue-400 rounded-md p-3 mt-4  text-white font-semibold md:m-0 m-5">
+          <div className="mt-10">
+          <button className="bg-blue-400 rounded-md p-3 mt-6  text-white font-semibold md:m-0 m-5">
             Get Started
           </button>
+          </div>
         </div>
         <div className="sm:m-5">
           <img className="rounded-lg" src="src/assets/photohome.jpg" alt="" />
@@ -43,7 +45,7 @@ const Home = () => {
 
       <div className="categori-item  w-full mt-16">
         <div className="text-center">
-          <h1 className="text-5xl font-semibold text-gray-900 my-5">
+          <h1 className="text-5xl font-semibold text-gray-900 my-10">
             Job Category List{" "}
           </h1>
           <p className="text-gray-600  font-semibold">
@@ -51,7 +53,7 @@ const Home = () => {
             job responsibilities
           </p>
         </div>
-        <div className="flex-cols md:flex  md:justify-center md:my-8 my-10 md:gap-5 gap-5">
+        <div className="flex-cols md:flex  md:justify-center md:my-14 my-10 md:gap-5 gap-5">
           {categories.map((categorie) => (
             <Categories key={categorie.id} categorie={categorie}></Categories>
           ))}

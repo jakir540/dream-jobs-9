@@ -6,7 +6,7 @@
         "job_title": "Software Engineer",
         "company_name": "ABC Inc.",
         "remote_job": true,
-        "onsite_job": false,
+       
         "location": "Remote",
         "fulltime": "Full Time",
         "parttime": false,
@@ -24,7 +24,7 @@
         "job_title": "Marketing Manager",
         "company_name": "XYZ Corp.",
         "remote_job": true,
-        "onsite_job": false,
+        
         "location": "New York, NY",
         "fulltime": "Part Time",
         "parttime": false,
@@ -41,8 +41,8 @@
         "company_logo": "https://images.unsplash.com/photo-1562307534-a03738d2a81a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
         "job_title": "Sales Associate",
         "company_name": "LMN Corp.",
-        "remote_job": true,
-        "onsite_job": true,
+        "remote_job": false,
+        
         "location": "Los Angeles, CA",
         "fulltime": "Full Time",
         "parttime": false,
@@ -59,8 +59,8 @@
         "company_logo": "https://images.unsplash.com/photo-1553835973-dec43bfddbeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "job_title": "Account Manager",
         "company_name": "123 Inc.",
-        "remote_job": true,
-        "onsite_job": true,
+        "remote_job": false,
+       
         "location": "Chicago, IL",
         "fulltime": "Full Time",
         "parttime": false,
@@ -78,7 +78,7 @@
         "job_title": "Account Manager",
         "company_name": "123 Inc.",
         "remote_job": true,
-        "onsite_job": false,
+       
         "location": "Chicago, IL",
         "fulltime": "Part Time",
         "parttime": false,
@@ -96,7 +96,7 @@
         "job_title": "Account Manager",
         "company_name": "123 Inc.",
         "remote_job": false,
-        "onsite_job": true,
+       
         "location": "Chicago, IL",
         "fulltime": "Part Time",
         "parttime": false,

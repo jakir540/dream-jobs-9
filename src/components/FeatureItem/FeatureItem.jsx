@@ -9,7 +9,7 @@ const FeatureItem = ({ feature }) => {
     company_name,
     job_title,
     location,
-    onsite_job,
+    
     salary,
     remote_job,
     fulltime,
@@ -34,7 +34,7 @@ const FeatureItem = ({ feature }) => {
 
           <div className="card-actions justify-start my-4">
             <div className="rounded-md btn-outline border text-blue-700 font-semibold px-5 py-2">
-              {onsite_job ? "Onsite" : "Remort"}
+              {remote_job ? "Remote":"Onsite"}
             </div>
             <div className="rounded-md btn-outline border text-blue-700 font-semibold px-5 py-2">
               {fulltime}
@@ -71,7 +71,7 @@ const FeatureItem = ({ feature }) => {
 
 
 
-          
+
 
           <Link to={`/jobDetails/${id}`}>
           <button className="rounded-md w-32 bg-blue-400 font-semibold px-5 py-2">
